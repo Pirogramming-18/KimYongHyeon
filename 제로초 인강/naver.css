@@ -146,3 +146,47 @@ nav li a {
   top: 185px;
   right: 270px;
 }
+
+#search-keyboard {
+  position: absolute;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+  display: inline-block;
+  width: 43px;
+  height: 24px;
+  background-position: -794px -534px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  padding: 0 6px;
+  margin: -6px 0 0 -10px;
+  top: 32%;
+  left: 30%;
+}
+
+#search-history {
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background-position: -315px -295px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png);
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.btn_keyboard {
+  position: absolute;
+  top: 0;
+  right: 84px;
+  bottom: 0;
+  width: 50px;
+}
+
+.btn-arw {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  bottom: 0;
+  width: 50px;
+}
