@@ -13,7 +13,12 @@ header {
 
 main {
   display: inline-block;
+  background-color: #eee;
   width: 100%;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .blind {
@@ -28,7 +33,6 @@ main {
 .center-align {
   margin: 0 auto;
   width: 1080px;
-  background-color: #eee;
 }
 
 #header-top {
@@ -198,12 +202,12 @@ nav li a {
 }
 
 #main-centered {
-  padding: 8px 10px 0;
+  padding: 8px 10px;
   width: 1100px;
 }
 
 #main-ad {
-  display: inline-block;
+  /* display: inline-block; */
   width: 740px;
   height: 120px;
   background-color: #555;
@@ -213,7 +217,7 @@ nav li a {
 }
 
 #main-login {
-  display: inline-block;
+  /* display: inline-block; */
   width: 332px;
   height: 120px;
   vertical-align: top;
@@ -242,6 +246,7 @@ nav li a {
 
 #main-weather {
   display: inline-block;
+  width: 332px;
   height: 142px;
   background-color: white;
   margin-bottom: 8px;
@@ -249,30 +254,36 @@ nav li a {
 
 #main-second-ad {
   display: inline-block;
+  width: 332px;
   height: 150px;
   background-color: #555;
   margin-bottom: 8px;
 }
 
 #main-category {
-  display: inline-block;
+  float: left;
   width: 740px;
+  height: 837px;
   background-color: white;
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 #main-shopping {
-  display: inline-block;
+  float: left;
   width: 332px;
   height: 837px;
   background-color: white;
+  margin-bottom: 8px;
 }
 
 #main-event {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 130px;
   background-color: white;
   vertical-align: top;
+  margin-bottom: 8px;
 }
 
 #main-third-ad {
@@ -280,4 +291,73 @@ nav li a {
   width: 332px;
   height: 130px;
   background-color: #555;
+}
+
+#main-first-block {
+  display: inline-block;
+  width: 100%;
+}
+
+#main-second-block .inline-block:first-child {
+  width: 740px;
+}
+
+#main-second-block .inline-block:last-child {
+  width: 332px;
+  vertical-align: top;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+#main-newstand {
+  display: inline-block;
+  width: 740px;
+  height: 246px;
+  background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#main-newstand h3 {
+  height: 45px;
+  border-bottom: 1px solid #f1f3f6;
+}
+
+#main-newstand ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-newstand li {
+  float: left;
+  width: 123px;
+  height: 67px;
+  border-right: 1px solid #f1f3f6;
+  border-bottom: 1px solid #f1f3f6;
+  text-align: center;
+}
+
+#main-newstand li img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#main-third-block,
+#main-fourth-block {
+  display: inline-block;
+  width: 100%;
 }
