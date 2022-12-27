@@ -93,3 +93,7 @@ nav li {
   display: inline-block;
   margin: 0 5px;
 }
+
+nav li a {
+  text-decoration: none;
+}
