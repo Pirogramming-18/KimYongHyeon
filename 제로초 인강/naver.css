@@ -12,9 +12,22 @@
   width: 1080px;
 }
 
-#header-search > h1 {
-  width: 280px;
+#header-search h1 {
+  width: 238px;
+  height: 60px;
   display: inline-block;
+  background-image: url(./logoImg.png);
+  background-position: 0 -163px;
+  background-size: 471px 446px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+#header-search a {
+  height: 50px;
+  text-decoration: none;
 }
 
 #header-search h2 {
@@ -23,5 +36,11 @@
 
 #header-search fieldset {
   width: 520px;
+  height: 49px;
   display: inline-block;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 0;
 }
