@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -28,6 +32,7 @@
 #header-search a {
   height: 50px;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 #header-search h2 {
@@ -35,7 +40,7 @@
 }
 
 #header-search fieldset {
-  width: 520px;
+  width: 521px;
   height: 49px;
   display: inline-block;
   margin-left: 20px;
@@ -43,4 +48,13 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-right: 0;
+  border: 2px solid #19ce60;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+#header-search fieldset input {
+  border: none;
+  padding: 0;
+  outline: none;
 }
