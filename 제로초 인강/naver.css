@@ -161,6 +161,15 @@ main {
 
 #search-ranking:hover ul {
   display: inline-block;
+  z-index: 100;
+}
+
+#z-example {
+  position: absolute;
+  background: yellow;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
 }
 
 #search-ranking ul {
