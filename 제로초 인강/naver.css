@@ -115,25 +115,25 @@ main {
   top: -2px;
 }
 
-nav {
+#nav-menu {
   height: 46px;
   border-top: 1px solid #f1f3f6;
   border-bottom: 1px solid #f1f3f6;
 }
 
-nav ul {
+#nav-menu ul {
   margin: 0;
   padding: 16px 0 0 4px;
   list-style: none;
   float: left;
 }
 
-nav li {
+#nav-menu li {
   display: inline-block;
   margin: 0 5px;
 }
 
-nav li a {
+#nav-menu li a {
   text-decoration: none;
 }
 
@@ -154,7 +154,27 @@ nav li a {
 #search-ranking {
   position: absolute;
   top: 185px;
-  right: 270px;
+  right: 0;
+  width: 380px;
+  height: 20px;
+}
+
+#search-ranking:hover ul {
+  display: inline-block;
+}
+
+#search-ranking ul {
+  display: none;
+  list-style: none;
+  padding: 10px 17px;
+  margin: 0;
+  width: 332px;
+  height: 334px;
+  border: 1px solid #111;
+  background-color: white;
+  position: absolute;
+  right: 172px;
+  top: -25px;
 }
 
 #search-keyboard {
