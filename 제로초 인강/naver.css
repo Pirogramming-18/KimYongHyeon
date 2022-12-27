@@ -250,6 +250,7 @@ nav li a {
   height: 142px;
   background-color: white;
   margin-bottom: 8px;
+  vertical-align: top;
 }
 
 #main-second-ad {
@@ -257,6 +258,7 @@ nav li a {
   width: 332px;
   height: 150px;
   background-color: #555;
+  vertical-align: top;
   margin-bottom: 8px;
 }
 
@@ -284,6 +286,7 @@ nav li a {
   background-color: white;
   vertical-align: top;
   margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 #main-third-ad {
@@ -295,16 +298,19 @@ nav li a {
 
 #main-first-block {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
 }
 
 #main-second-block .inline-block:first-child {
   width: 740px;
+  float: left;
+  margin-right: 8px;
 }
 
 #main-second-block .inline-block:last-child {
   width: 332px;
-  vertical-align: top;
+  float: left;
 }
 
 #main-ytn h3,
@@ -336,6 +342,7 @@ h6 {
 }
 
 #main-newstand ul {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -343,7 +350,7 @@ h6 {
 
 #main-newstand li {
   float: left;
-  width: 123px;
+  width: calc(100% / 6);
   height: 67px;
   border-right: 1px solid #f1f3f6;
   border-bottom: 1px solid #f1f3f6;
@@ -360,4 +367,5 @@ h6 {
 #main-fourth-block {
   display: inline-block;
   width: 100%;
+  vertical-align: top;
 }
