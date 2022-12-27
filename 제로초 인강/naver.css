@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+header {
+  height: 170px;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -23,6 +27,7 @@ body {
 
 #header-top {
   float: right;
+  margin-top: 8px;
 }
 
 #header-top span {
@@ -34,6 +39,7 @@ body {
 
 #header-search {
   clear: both;
+  padding-top: 20px;
 }
 
 #header-search h1 {
@@ -48,7 +54,8 @@ body {
   text-indent: 100%;
   overflow: hidden;
   position: relative;
-  top: -4px;
+  top: -5px;
+  left: 1px;
 }
 
 #header-search a {
@@ -98,10 +105,17 @@ body {
   top: -2px;
 }
 
+nav {
+  height: 46px;
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #f1f3f6;
+}
+
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 16px 0 0 4px;
   list-style: none;
+  float: left;
 }
 
 nav li {
@@ -111,4 +125,24 @@ nav li {
 
 nav li a {
   text-decoration: none;
+}
+
+.nav-divder {
+  float: left;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
+}
+
+#search-ranking {
+  position: absolute;
+  top: 185px;
+  right: 270px;
 }
