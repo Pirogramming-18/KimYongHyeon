@@ -149,17 +149,18 @@ body {
 
 header {
   height: 10vh;
-  margin: 0 auto;
   z-index: 1;
+  margin: 0 auto;
 }
 
 header ul {
   display: block;
   height: 50px;
-  margin: 0 auto;
+  margin: 0 20px;
   text-align: center;
   color: white;
   padding-top: 20px;
+  margin: 0 auto;
 }
 
 header li {
@@ -172,7 +173,8 @@ header li {
 }
 
 #header-left {
-  margin-right: 200px;
+  margin: 0 auto;
+  /* margin-right: 150px; */
 }
 #header-right,
 #header-left {
@@ -259,15 +261,22 @@ header li {
 
 #login-section {
   width: 25%;
-  height: 58vh;
+  height: 100%;
   display: inline-block;
-  background-color: white;
   margin: 0 auto;
   vertical-align: top;
-  border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
+}
+
+#login-section form {
+  background-color: white;
+  border-radius: 5px;
+}
+
+#information {
+  padding-bottom: 10px;
 }
 
 #small-words {
@@ -288,7 +297,8 @@ main {
 }
 
 #username {
-  margin-top: 30px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .input-section {
