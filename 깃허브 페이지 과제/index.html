@@ -9,7 +9,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Github</title>
   </head>
   <body>
@@ -22,18 +27,18 @@
               <span id="logo-img"></span>
             </li>
             <li>
-              <span>Why Github?</span>
+              <a href="#" class="menu-items">Why Github?</a>
               <span class="material-symbols-outlined"> expand_more </span>
             </li>
-            <li>Team</li>
-            <li>Enterprise</li>
+            <li><a href="#" class="menu-items">Team</a></li>
+            <li><a href="#" class="menu-items">Enterprise</a></li>
             <li>
-              Explore
+              <a href="#" class="menu-items">Explore</a>
               <span class="material-symbols-outlined"> expand_more </span>
             </li>
-            <li>Marketplace</li>
+            <li><a href="#" class="menu-items">Marketplace</a></li>
             <li>
-              Pricing
+              <a href="#" class="menu-items">Pricing</a>
               <span class="material-symbols-outlined"> expand_more </span>
             </li>
           </div>
@@ -43,13 +48,12 @@
               <input
                 id="search-input"
                 type="text"
-                value="Search GitHub"
-                onfocus="this.value=''"
-                onblur="this.value='Search GitHub'"
+                placeholder="Search GitHub"
+                onblur="this.placeholder='Search GitHub'"
               />
             </li>
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="#" class="menu-items">Sign in</a></li>
+            <li><a href="#" class="menu-items">Sign up</a></li>
           </div>
         </ul>
       </header>
@@ -66,34 +70,36 @@
           </div>
         </section>
         <section id="login-section">
-          <div id="username" class="input-section">
-            <div class="input-name">Username</div>
-            <input type="text" />
-          </div>
-          <div id="email" class="input-section">
-            <div class="input-name">Email</div>
-            <input type="text" />
-          </div>
-          <div id="password" class="input-section">
-            <div class="input-name">Password</div>
-            <input type="text" />
-          </div>
-          <div id="warning" class="input-section letter-setting">
-            <p>
-              Make sure it's at least 15 characters OR at least 8 characters
-              including a number and a lowercase letter. <a>Learn more.</a>
-            </p>
-          </div>
-          <div id="submit-section">
-            <button id="login-button">Sign up for GitHub</button>
-          </div>
-          <div id="information" class="input-section letter-setting">
-            <p>
-              By clicking "Sign up for GitHub", you agree to our Terms of
-              Service and Privacy Statement. We'll occasionally send you account
-              related emails.
-            </p>
-          </div>
+          <form action="#">
+            <div id="username" class="input-section">
+              <div class="input-name">Username</div>
+              <input type="text" />
+            </div>
+            <div id="email" class="input-section">
+              <div class="input-name">Email</div>
+              <input type="text" />
+            </div>
+            <div id="password" class="input-section">
+              <div class="input-name">Password</div>
+              <input type="text" />
+            </div>
+            <div id="warning" class="input-section letter-setting">
+              <p>
+                Make sure it's at least 15 characters OR at least 8 characters
+                including a number and a lowercase letter. <a>Learn more.</a>
+              </p>
+            </div>
+            <div id="submit-section">
+              <button id="login-button">Sign up for GitHub</button>
+            </div>
+            <div id="information" class="input-section letter-setting">
+              <p>
+                By clicking "Sign up for GitHub", you agree to our Terms of
+                Service and Privacy Statement. We'll occasionally send you
+                account related emails.
+              </p>
+            </div>
+          </form>
         </section>
       </main>
     </div>

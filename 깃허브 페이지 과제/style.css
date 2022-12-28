@@ -128,10 +128,16 @@ table {
   box-sizing: content-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: gray;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Roboto:wght@300&display=swap");
 
 .blind {
   display: none;
@@ -209,20 +215,34 @@ header li {
   padding-left: 10px;
 }
 
+#search-input::placeholder {
+  color: white;
+}
+
+#search-input:focus::placeholder {
+  opacity: 0.5;
+  color: black;
+}
+
+#search-input:focus {
+  transition: 0.3s;
+  background-color: white;
+  color: black;
+  opacity: 1;
+}
+
 #header-right li:last-child {
   padding: 0px 8px;
   border: 1px solid #fff;
   border-radius: 5px;
 }
-
-#header-right li:last-child:hover {
-  transition: 0.5s;
-  background-color: white;
+.menu-items:hover {
+  transition: 0.3s;
+  opacity: 0.7;
 }
 
-#header-right li:last-child a:hover {
-  transition: 0.5s;
-  color: black;
+.menu-items {
+  color: white;
 }
 
 #wording-section {
@@ -230,9 +250,10 @@ header li {
   display: inline-block;
   color: white;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: left;
   padding-right: 140px;
+  font-family: "Roboto", sans-serif;
 }
 
 #login-section {
@@ -254,7 +275,7 @@ header li {
 }
 
 #big-words {
-  font-size: 48px;
+  font-size: 60px;
   margin-top: 40px;
   margin-bottom: 10px;
 }
@@ -287,6 +308,12 @@ main {
 #login-section input {
   width: 95%;
   height: 30px;
+  border: 0.5px solid;
+}
+
+#login-section input:focus {
+  background-color: #d9e3f5;
+  border: 0.5px solid;
 }
 
 #submit-section {
