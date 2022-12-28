@@ -149,13 +149,14 @@ body {
 
 header {
   height: 10vh;
+  margin: 0 auto;
   z-index: 1;
 }
 
 header ul {
   display: block;
   height: 50px;
-  margin: 0 20px;
+  margin: 0 auto;
   text-align: center;
   color: white;
   padding-top: 20px;
