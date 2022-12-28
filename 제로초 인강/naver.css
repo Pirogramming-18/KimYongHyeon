@@ -449,6 +449,7 @@ h6 {
 }
 
 #subject-list {
+  position: relative;
   width: 660px;
 }
 
@@ -480,8 +481,42 @@ h6 {
   padding: 0;
   margin: 0;
   list-style: none;
+  text-align: center;
 }
 
 #subject-list li {
   float: left;
+  margin-right: 10px;
+  height: 35px;
+  padding: 14px 7px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+#subject-list li.highlight {
+  border-bottom: 3px solid #00c73c;
+  color: #00b336;
+  height: 35px;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.opacity-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 45px;
+  width: 15px;
+  opacity: 0.5;
+  background-color: white;
+}
+
+.opacity-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 45px;
+  width: 15px;
 }
