@@ -1,0 +1,224 @@
+/* reset css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: gray;
+}
+
+.blind {
+  display: none;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  height: 15vh;
+  z-index: 10;
+}
+
+header ul {
+  display: block;
+  height: 50px;
+  margin: 0 20px;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+header li {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  height: 30px;
+  margin-right: 20px;
+}
+
+#header-left {
+  margin-right: 200px;
+}
+#header-right,
+#header-left {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#main-section {
+  height: 75vh;
+  background-image: url(./img/bg-img.jpeg);
+  z-index: -1;
+}
+footer {
+  height: 25vh;
+}
+
+#header-left #logo-img {
+  width: 20px;
+  height: 20px;
+  background-image: url(./img/logo-img4.png);
+  background-position: -482px -487px;
+}
+
+#search-input {
+  border-radius: 5px;
+  background-color: #837f7f;
+  opacity: 0.5;
+  height: 23px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+#header-right li:last-child {
+  padding: 0px 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+#wording-section {
+  height: 60vh;
+  display: inline-block;
+  color: white;
+  margin: 0 200px;
+}
+
+#login-section {
+  height: 60vh;
+  display: inline-block;
+  background-color: white;
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+  height: 60vh;
+}
