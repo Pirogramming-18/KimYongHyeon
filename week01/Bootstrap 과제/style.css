@@ -16,6 +16,26 @@ nav a:hover {
   font-size: 20px;
 }
 
-#landing {
-  margin-top: 42px;
+h6 {
+  line-height: 24px !important;
+  letter-spacing: 1.1px;
+}
+
+#landing,
+#intro,
+#hightlights,
+#contact,
+#gallary {
+  padding-top: 42px;
+}
+
+@media (max-width: 992px) {
+  #header-name,
+  #header-hightlights,
+  #header-intro,
+  #header-gallary,
+  #header-contact,
+  #header-right a {
+    display: none;
+  }
 }
