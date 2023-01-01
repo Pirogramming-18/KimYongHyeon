@@ -2,7 +2,7 @@ a {
   text-decoration: none !important;
 }
 
-nav {
+#headingOne {
   position: fixed;
   z-index: 2;
   top: 0;
@@ -14,6 +14,7 @@ nav a:hover {
 
 #header-logo {
   font-size: 20px;
+  text-align: left;
 }
 
 h6 {
@@ -28,22 +29,47 @@ h6 {
   padding-top: 42px;
 }
 
-@media (max-width: 992px) {
-  #header-name,
-  #header-hightlights,
-  #header-intro,
-  #header-gallary,
-  #header-contact,
-  #header-right a {
-    display: none;
-  }
-}
-
 .bi {
   font-size: 108px;
   color: white;
 }
 
+.bi-list {
+  font-size: 30px;
+}
+
 .form-control {
   border: 0;
+}
+
+@media (max-width: 992px) {
+  #collapseOne {
+    width: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 7vh;
+  }
+
+  .accordion-body a:hover {
+    transition: all 0.3s;
+    color: white !important;
+  }
+
+  .accordion-item {
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  #gallary {
+    margin-top: 0 !important;
+  }
+
+  footer .container {
+    margin: 0.5rem;
+  }
+
+  .col-12 {
+    margin: 0.5rem 0;
+  }
 }
