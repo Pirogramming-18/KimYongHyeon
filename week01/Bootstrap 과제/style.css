@@ -5,6 +5,7 @@ a {
 nav {
   position: fixed;
   z-index: 2;
+  top: 0;
 }
 nav a:hover {
   transition: all 0.3s;
@@ -16,6 +17,5 @@ nav a:hover {
 }
 
 #landing {
-  position: absolute;
-  top: 5.5%;
+  margin-top: 42px;
 }
