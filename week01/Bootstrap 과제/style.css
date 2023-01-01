@@ -1,0 +1,19 @@
+a {
+  text-decoration: none !important;
+}
+
+nav {
+  position: fixed;
+}
+nav a:hover {
+  transition: all 0.3s;
+  color: white !important;
+}
+
+#header-logo {
+  font-size: 20px;
+}
+
+main {
+  height: 100vh;
+}
