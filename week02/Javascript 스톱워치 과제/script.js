@@ -94,7 +94,6 @@ function selectAll(ch) {
 }
 
 function deleteItem(items) {
-  console.log(data);
   for (let i = 0; i < data.length; i++) {
     let str = "".concat(
       data[i].second_first,
@@ -105,10 +104,7 @@ function deleteItem(items) {
     );
     for (let j = 0; j < items.length; j++) {
       if (items[j].childNodes[1].checked == true) {
-        console.log("data", str);
-        console.log("item", items[j].childNodes[3].textContent);
         if (items[j].childNodes[3].textContent == str) {
-          console.log(items[j].childNodes[3].textContent, "지워짐");
           data.splice(i, 1);
           i--;
           items[j].remove();
