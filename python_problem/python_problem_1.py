@@ -1,4 +1,5 @@
 num = 0
+cur = 1;
 while True:
     try:
         num = int(input("부를 숫자를 입력하세요(1,2,3만 입력 가능) : "))
@@ -8,4 +9,8 @@ while True:
             print("1,2,3 중 하나를 입력하세요")
     except ValueError:
         print("정수를 입력하세요")
-
+        
+for i in range(num):
+    print("playerA : ", cur)
+    cur += 1
+    
