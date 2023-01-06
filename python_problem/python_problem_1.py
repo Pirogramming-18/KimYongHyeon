@@ -1,44 +1,48 @@
+import random
 cur = 0
-turn = True # true : playerA, false : playerB
+turn = True # true : player A, false : player B
 
 def brGame(player):
-    num = selectNumber()
+    num = selectNumber(player)
     printNumber(num, player)
 
-def selectNumber():
+def selectNumber(player):
     num = 0
-    while True:
-        try:
-            num = int(input("부를 숫자를 입력하세요(1,2,3만 입력 가능) : "))
-            if(num == 1 or num == 2 or num == 3):
-                break
-            else:
-                print("1,2,3 중 하나를 입력하세요")
-        except ValueError:
-            print("정수를 입력하세요")
-            
+    if player == "computer":
+        num = random.randint(1,3)
+    else:
+        while True:
+            try:
+                num = int(input("부를 숫자를 입력하세요(1,2,3만 입력 가능) : "))
+                if(num == 1 or num == 2 or num == 3):
+                    break
+                else:
+                    print("1,2,3 중 하나를 입력하세요")
+            except ValueError:
+                print("정수를 입력하세요")
+                
     return num
 
-def printNumber(num, player):
+def printNumber(num, turn):
     global cur
     for i in range(num):
         cur += 1
         if cur <= 31:
-            print(f"player{player} : ", cur)
+            print(f"{turn} : ", cur)
         
         
  #main 실행 코드       
 while True:
-    if turn: #player A turn
-        brGame("A")
+    if turn: #computer turn
+        brGame("computer")
     else:   #player B turn
-        brGame("B")
+        brGame("player")
     
     if(cur >= 31):  
         if(turn):
-            print("player B win!")
+            print("player win!")
         else:
-            print("player A win!")
+            print("computer win!")
         break
     turn = not turn
 
