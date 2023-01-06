@@ -33,8 +33,11 @@ while True:
         printNumber(num, "B")
     
     if(cur >= 31):
+        if(turn):
+            print("player B win!")
+        else:
+            print("player A win!")
         break
-    
     turn = not turn
 
 
