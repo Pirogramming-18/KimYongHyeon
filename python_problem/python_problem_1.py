@@ -1,6 +1,10 @@
 cur = 0
 turn = True # true : playerA, false : playerB
 
+def brGame(player):
+    num = selectNumber()
+    printNumber(num, player)
+
 def selectNumber():
     num = 0
     while True:
@@ -25,14 +29,12 @@ def printNumber(num, player):
         
  #main 실행 코드       
 while True:
-    if turn: #playerA turn
-        num = selectNumber()
-        printNumber(num, "A")
-    else:
-        num = selectNumber()
-        printNumber(num, "B")
+    if turn: #player A turn
+        brGame("A")
+    else:   #player B turn
+        brGame("B")
     
-    if(cur >= 31):
+    if(cur >= 31):  
         if(turn):
             print("player B win!")
         else:
