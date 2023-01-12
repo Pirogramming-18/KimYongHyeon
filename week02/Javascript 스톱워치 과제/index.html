@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>스톱워치</title>
+  </head>
+  <body>
+    <div class="watch-title">
+      <h2>피로그래밍 스톱워치</h2>
+    </div>
+
+    <div class="watch">
+      <div class="timer">
+        <div class="time">
+          <h1>
+            <span class="second-first">0</span>
+            <span class="second-second">0</span>
+            :
+            <span class="millSecond-frist">0</span>
+            <span class="millSecond-second">0</span>
+          </h1>
+        </div>
+      </div>
+      <div class="option-wrapper">
+        <div class="option"><a href="#" class="start">start</a></div>
+        <div class="option"><a href="#" class="stop">stop</a></div>
+        <div class="option"><a href="#" class="reset">reset</a></div>
+      </div>
+    </div>
+    <div class="record">
+      <div class="record-nav">
+        <div class="nav-select-all">
+          <input type="checkbox" />
+        </div>
+        <div class="nav-center">구간 기록</div>
+        <div class="nav-delete">
+            <a href="#">
+                <span class="material-symbols-outlined">delete </span>
+            </a>
+          </button>
+        </div>
+      </div>
+      <ul class="record-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

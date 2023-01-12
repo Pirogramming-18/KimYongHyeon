@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <title>Bootstrap 과제</title>
+  </head>
+  <body class="bg-secondary">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <div class="accordion-header bg-dark border-0 w-100" id="headingOne" >
+          <nav class="container-fluid text-light bg-dark">
+            <div class="row justify-content-between ">
+              <div class="col-lg-8 col-md-6 col-sm-6 col-6 d-flex justify-content-between">
+                <div id="header-left" class="container text-center m-0 align-self-center">
+                  <div class="row">
+                    <div id="header-logo" class="col-lg col-md-6 col-sm-6 col-6 align-self-center p-0 ">
+                      <a href="#" class="text-light"> Pirogramming </a>
+                    </div>                
+                      <div id="header-name" class="col-lg col-md-12 d-none d-lg-block align-self-center p-0">
+                        <a href="#" class="text-primary">Yong-Hyeon</a>
+                      </div>
+                      <div id="header-intro" class="col-lg col-md-12 d-none d-lg-block align-self-center p-0">
+                        <a href="#intro" class="text-muted">Intro</a>
+                      </div>
+                      <div id="header-hightlights" class="col-lg col-md-12 d-none d-lg-block align-self-center p-0">
+                        <a href="#hightlights" class="text-muted">Hightlights</a>
+                      </div>
+                      <div id="header-gallary" class="col-lg col-md-12 d-none d-lg-block align-self-center p-0">
+                        <a href="#gallary" class="text-muted">Gallary</a>
+                      </div>
+                      <div id="header-contact" class="col-lg col-md-12 d-none d-lg-block align-self-center p-0">
+                        <a href="#contact" class="text-muted">Contact</a>
+                      </div>
+                  </div>
+                </div>             
+              </div>              
+              <div id="header-right" class="col-lg-4 col-md-6 col-sm-6 col-6 d-lg-flex d-flex justify-content-end">
+                <a
+                  class="btn border border-success d-none d-lg-block rounded px-3 py-1 mx-2 my-1 text-success" data-bs-toggle="modal" data-bs-target="#about-modal">
+                  About
+                </a>            
+                <button id="menu-btn" class="d-lg-none d-md-block m-1 bg-dark border rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">            
+                  <i class="bi bi-list"></i>
+                </button>
+              </div>
+            </div>
+            </nav>
+          
+        </div>
+        <div id="collapseOne" class="accordion-collapse collapse d-lg-none bg-dark w-100" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">          
+            <div>                             
+                <div class="my-1">
+                  <a href="#" class="text-primary">Yong-Hyeon</a>
+                </div>
+                <div class="my-1">
+                  <a href="#intro" class="text-muted">Intro</a>
+                </div>
+                <div class="my-1">
+                  <a href="#hightlights" class="text-muted">Hightlights</a>
+                </div>
+                <div class="my-1">
+                  <a href="#gallary" class="text-muted">Gallary</a>
+                </div>
+                <div class="my-1">
+                  <a href="#contact" class="text-muted">Contact</a>
+                </div>
+                <div class="my-1">
+                  <a
+                  class="btn border border-success rounded px-3 py-1 my-1 text-success" data-bs-toggle="modal" data-bs-target="#about-modal">
+                  About
+                </a>   
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+        <!-- About Modal -->
+        <div class="modal fade" id="about-modal">
+          <div class="modal-dialog">
+              <div class="modal-content text-light bg-secondary">
+                  <div class="modal-header justify-content-center">
+                      <h5 class="modal-title">피로그래밍 18기</h5>
+                  </div>
+                  <div class="modal-body text-center">
+                     <h3>파이팅 !</h3>                       
+                     <p>팀원들 아르샤 하느라 고생 많으셨습니다!<br>
+                        앞으로도 열심히 해봐요!!
+                    </p>
+                  </div>
+                  <div class="modal-footer justify-content-end">
+                      <p class="text-primary">Download</p>
+                      <button type="button" class="btn btn-info" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <main>
+          <div id="landing" class="vh-100 vw-100 bg-light">
+            <div class="container h-100 text-center ">
+              <div style="padding-top: 20%">
+                <div ><h1 class="">Pirogramming 18</h1></div>
+                <div><h6 class="border-bottom pb-4">cheer up</h6></div>
+                <div><a href="#intro" class="btn btn-primary mt-2">Get Started</a></div>
+              </div>
+            </div>
+          </div>
+            <div id="intro" class="bg-secondary vh-100">
+              <div class="container h-100 text-center ">
+                <div style="padding-top: 15%">
+                  <div class="row w-75 mx-auto">
+                  <div class="col-12"><h1 class="text-danger">Built on the Bootstrap Grid</h1></div>
+                  <div class="col-12"><h6 class="text-light mx-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellat maxime sequi voluptatum, veniam rem quas voluptas mollitia doloribus voluptates error</h6></div>
+                  <div class="col-12"><a href="#hightlights" class="btn btn-light mt-2">Learn More</a></div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div id="hightlights" class="bg-secondary vh-50">
+              <div class="container">
+                <div class="row border-bottom border-dark text-center text-primary">
+                  <h1>Flexible Layout</h1>
+                </div>
+                <div class="row text-center my-5">
+                  <div class="col-lg-4">
+                    <i class="bi bi-display"></i>
+                    <p class="text-light">Responsive</p>
+                    <p class="text-light">Your site looks good everywhere</p>              
+                  </div>
+                  <div class="col-lg-4">
+                    <i class="bi bi-patch-check"></i>    
+                    <p class="text-light">Customizable</p>
+                    <p class="text-light">Easy to theme and custmoize with SASS</p>    
+                  </div>
+                  <div class="col-lg-4">
+                    <i class="bi bi-star"></i>
+                    <p class="text-light">Consistent</p>
+                    <p class="text-light">A mature, well-tested, stable codebase</p>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="gallary" class="d-md-block d-none vh-100">
+              <div class="row text-center my-3">
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/1/300/200" alt="">      
+                </div>
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/2/300/200" alt="">      
+                </div>
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/3/300/200" alt="">      
+                </div>
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/4/300/200" alt="">      
+                </div>
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/5/300/200" alt="">      
+                </div>
+                <div class="img-item col-lg-4 col-md-6 my-3">
+                  <img src="https://picsum.photos/seed/6/300/200" alt="">      
+                </div>
+              </div>
+            </div>
+            <div id="gallary" class="d-sm-block d-md-none row text-center my-3">
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/1/300/200" alt="">      
+              </div>
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/2/300/200" alt="">      
+              </div>
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/3/300/200" alt="">      
+              </div>
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/4/300/200" alt="">      
+              </div>
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/5/300/200" alt="">      
+              </div>
+              <div class="img-item col-lg-4 col-md-6 my-3">
+                <img src="https://picsum.photos/seed/6/300/200" alt="">      
+              </div>
+            </div>
+            <div id="contact" class="bg-secondary">
+              <div class="container">
+              <div class="row border-bottom border-dark text-center text-primary">
+                <h1>Get in Touch</h1>
+              </div>
+              <div class="row text-center mt-5 ">
+                <div class="col">
+                  <input type="text" placeholder="name" class="form-control rounded w-100">
+                </div>
+                <div class="col">
+                  <input type="text" placeholder="email" class="form-control rounded w-100">
+                </div>
+                <div class="col">
+                  <input type="text" placeholder="phone" class="form-control rounded w-100">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <textarea placeholder="Your message here" cols="30" rows="10" class="form-control w-100 mt-3 rounded"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-center mt-4">
+                  <button type="button" class="btn btn-primary w-25 text-center" data-bs-toggle="modal" data-bs-target="#send-modal">Send</button>
+                </div>
+              </div>
+            </div>
+            <!-- Send Modal -->
+            <div class="modal fade" id="send-modal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header justify-content-center">
+                          <h5 class="modal-title">Nice-Job!</h5>
+                      </div>
+                      <div class="modal-body">
+                          You clicked the button but it doesn't<br>
+                           actually go anywhere<br><br>
+                           <p class="text-muted">Learn more at Bootstrap</p>                           
+                      </div>
+                      <div class="modal-footer justify-content-center ">
+                          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">OK</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            </div>
+            <footer class="bg-dark vw-100">
+              <div class="container mt-5 pt-5 pb-3">
+                <div class="row">
+                  <dov class="col-md-4 col-12">
+                    <div class="category text-info">Information</div>
+                    <div class="category-item text-light">Product</div>
+                    <div class="category-item text-light">Services</div>
+                    <div class="category-item text-light">Benefit</div>
+                    <div class="category-item text-light">Developer</div>
+                  </dov>
+                  <dov class="col-md-4 col-12">
+                    <div class="category text-info">About</div>
+                    <div class="category-item text-light">Contact us</div>
+                    <div class="category-item text-light">Delivery Information</div>
+                    <div class="category-item text-light">Privacy Policy</div>
+                    <div class="category-item text-light">Trauma&Condition</div>
+                  </dov>
+                  <dov class="col-md-4 col-12">
+                    <div class="category text-info">Stay Posted</div>
+                    <input class="form-control input-lg my-2" type="text" placeholder="Tell me your email">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#send-modal">Subscribe for updates</button>
+                  </dov>
+                </div>
+              </div>
+            </footer>
+        </main>
+    </body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

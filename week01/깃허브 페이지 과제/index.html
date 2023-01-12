@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Github</title>
+  </head>
+  <body>
+    <div id="main-section">
+      <header>
+        <ul>
+          <div id="header-left">
+            <li>
+              <span class="blind">로고</span>
+              <span id="logo-img"></span>
+            </li>
+            <li>
+              <a href="#" class="menu-items">Why Github?</a>
+              <span class="material-symbols-outlined"> expand_more </span>
+            </li>
+            <li><a href="#" class="menu-items">Team</a></li>
+            <li><a href="#" class="menu-items">Enterprise</a></li>
+            <li>
+              <a href="#" class="menu-items">Explore</a>
+              <span class="material-symbols-outlined"> expand_more </span>
+            </li>
+            <li><a href="#" class="menu-items">Marketplace</a></li>
+            <li>
+              <a href="#" class="menu-items">Pricing</a>
+              <span class="material-symbols-outlined"> expand_more </span>
+            </li>
+          </div>
+          <div id="header-right">
+            <li>
+              <span class="blind">Search Github</span>
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Search GitHub"
+                onblur="this.placeholder='Search GitHub'"
+              />
+            </li>
+            <li><a href="#" class="menu-items">Sign in</a></li>
+            <li><a href="#" class="menu-items">Sign up</a></li>
+          </div>
+        </ul>
+      </header>
+      <main>
+        <section id="wording-section">
+          <div id="big-words">
+            <h1>Built for <br />developers</h1>
+          </div>
+          <div id="small-words">
+            <p>GitHub is a development platform inspired by the</p>
+            <p>way you work. From open source to business, you</p>
+            <p>can host and review code, manage projects, and</p>
+            <p>build software alongside 50 million developers.</p>
+          </div>
+        </section>
+        <section id="login-section">
+          <form action="#">
+            <div id="username" class="input-section">
+              <div class="input-name">Username</div>
+              <input type="text" />
+            </div>
+            <div id="email" class="input-section">
+              <div class="input-name">Email</div>
+              <input type="text" />
+            </div>
+            <div id="password" class="input-section">
+              <div class="input-name">Password</div>
+              <input type="text" />
+            </div>
+            <div id="warning" class="input-section letter-setting">
+              <p>
+                Make sure it's at least 15 characters OR at least 8 characters
+                including a number and a lowercase letter. <a>Learn more.</a>
+              </p>
+            </div>
+            <div id="submit-section">
+              <button id="login-button">Sign up for GitHub</button>
+            </div>
+            <div id="information" class="input-section letter-setting">
+              <p>
+                By clicking "Sign up for GitHub", you agree to our Terms of
+                Service and Privacy Statement. We'll occasionally send you
+                account related emails.
+              </p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div id="footer-image">
+        <img src="./img/footer-img.jpeg" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>
