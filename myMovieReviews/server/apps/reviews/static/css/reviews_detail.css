@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+
+.left {
+  color: white;
+  margin-left: 15%;
+  padding-top: 1%;
+}
+
+.left h1 {
+  font-weight: 400;
+}
+
+.sub p {
+  margin: 10px;
+  color: #999;
+}
+
+.sub p span {
+  color: white;
+}
+
+.contents {
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 80%;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12%;
+}
+.right img {
+  border-radius: 10px;
+}
+
+.option a {
+  width: 49%;
+}

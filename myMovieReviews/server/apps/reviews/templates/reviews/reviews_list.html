@@ -1,27 +1,38 @@
-{%load static %}
+{% extends 'reviews/base.html' %} {%load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block header %}
     <link rel="stylesheet" href="{% static 'css/reviews_list.css'%}" />
-    <title>리뷰 목록</title>
+    {% endblock header %}
+    
+    <title>{% block title %}리뷰 목록{% endblock title %}</title>
   </head>
-  <body>
-    <header><a href="#">myMovieReviews</a></header>
-    <hr />
-    <div class="item-wrapper">
+  {% block content %}
+    <div class="main-movie-list ">
+      <ol class="list my-5 mx-5 ">
       {% for review in reviews %}
-      <div class="item">
-        <p>제목: <a href="reviews-detail/{{review.id}}">{{review.title}}</a></p>
-        <p>개봉일: {{review.createDate}}</p>
-        <p>장르: {{review.genre}}</p>
-        <p>별점: {{review.stars}}</p>
-      </div>
+      <li class="item mx-5 my-5">
+        <a href="reviews-detail/{{review.id}}" class="movie-list-info">
+          <img src="{{review.src}}" alt={{review.title}}>
+          <div class="info-wrap" >
+            <div class="info">
+              <p class="display-6 title mx-3 my-3">{{review.title}}</p>
+              <span class="mx-3">{{review.createDate}}</span>
+              <span class="mx-1">{{review.genre}}</span>
+              <p class="mx-3 my-3">별점&nbsp{{review.stars}}</p>
+              <p class="mx-3 my-4 explain">{{review.explain}}</p>
+            </div>
+          </div> 
+        </a>
+      </li>
       <hr />
       {% endfor %}
+    </ol>
     </div>
-    <a href="reviews-create">리뷰 작성하기</a>
   </body>
+  {% endblock content %}
 </html>

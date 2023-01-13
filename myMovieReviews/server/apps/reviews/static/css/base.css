@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/bgImage.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-wraper {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid white;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#textMovie {
+  font-weight: 600;
+}
+
+.header-wraper a span {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header-wraper a {
+  height: 50%;
+  text-decoration: none;
+}

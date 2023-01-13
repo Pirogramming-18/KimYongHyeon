@@ -1,25 +1,41 @@
-{% load static %}
+{% extends 'reviews/base.html' %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {% block header %}
     <link rel="stylesheet" href="{% static 'css/reviews_detail.css' %}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>리뷰 상세보기</title>
+    {% endblock header %}
+    <title>{% block title %}리뷰 상세보기{% endblock title %}</title>
   </head>
+  {% block content %}
   <body>
-    <header><a href="/">myMovieReviews</a></header>
-    <hr />
-    <p>제목: {{review.title}}</p>
-    <p>감독: {{review.director}}</p>
-    <p>배우: {{review.actor}}</p>
-    <p>장르: {{review.genre}}</p>
-    <p>별점: {{review.stars}}</p>
-    <p>런타임: {{review.runtime}}</p>
-    <p>리뷰 내용: {{review.content}}</p>
-    <hr />
-    <a href="/reviews-update/{{review.id}}">수정</a>
-    <a href="/reviews-delete/{{review.id}}">삭제</a>
+    <div class="content-wrapper px-5">
+      <div class="left">
+        <h1 class="display-1 mb-3">{{review.title}}</h1>
+        <div class="sub">
+          <p>개봉일<span class="mx-2">{{review.createDate}}</span></p>
+          <p>감독<span class="mx-2">{{review.director}}</span></p>
+          <p>주연<span class="mx-2">{{review.actor}}</span></p>
+          <p>장르<span class="mx-2">{{review.genre}}</span></p>
+          <p>별점<span class="mx-2">{{review.stars}}</span></p>
+          <p>러닝타임<span class="mx-2">{{review.runtime}}&nbsp분</span></p>
+          <div class="contents">
+            <span class="mx-2">"{{review.content}}"</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="{{review.src}}" alt="{{review.title}}" />
+        <div class="option mt-2">
+          <a class="btn btn-outline-light" href="/reviews-update/{{review.id}}"
+            >수정</a
+          >
+          <a class="btn btn-outline-light" href="/reviews-delete/{{review.id}}"
+            >삭제</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
+  {% endblock content %}
 </html>
