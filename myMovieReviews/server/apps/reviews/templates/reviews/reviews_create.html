@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/reviews_create.css' %}" />
+    <title>리뷰 생성</title>
+  </head>
+  <body>
+    <form action="/reviews-create" method="post">
+      {% csrf_token %}
+      <input type="text" name="title" placeholder="제목" />
+      <input type="text" name="director" placeholder="감독" />
+      <input type="text" name="actor" placeholder="배우" />
+      <input type="text" name="genre" placeholder="장르" />
+      <input type="text" name="stars" placeholder="별점" />
+      <input type="text" name="createDate" placeholder="개봉일" />
+      <input type="text" name="runtime" placeholder="런타임" />
+      <input type="text" name="content" placeholder="리뷰 내용" />
+      <button>저장하기</button>
+    </form>
+  </body>
+</html>

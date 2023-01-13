@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'css/reviews_detail.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리뷰 상세보기</title>
+  </head>
+  <body>
+    <header><a href="/">myMovieReviews</a></header>
+    <hr />
+    <p>제목: {{review.title}}</p>
+    <p>감독: {{review.director}}</p>
+    <p>배우: {{review.actor}}</p>
+    <p>장르: {{review.genre}}</p>
+    <p>별점: {{review.stars}}</p>
+    <p>런타임: {{review.runtime}}</p>
+    <p>리뷰 내용: {{review.content}}</p>
+    <hr />
+    <a href="/reviews-update/{{review.id}}">수정</a>
+    <a href="/reviews-delete/{{review.id}}">삭제</a>
+  </body>
+</html>
