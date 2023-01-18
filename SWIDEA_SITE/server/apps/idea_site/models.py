@@ -11,7 +11,7 @@ class Idea(models.Model):
     image = models.ImageField(blank=True, upload_to='idea_site/%Y%m%d', null=True)
     content = models.TextField()
     interest = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)])
-    devtool = models.ForeignKey(Tool, on_delete=models.PROTECT, related_name='Tool')
+    devtool = models.ForeignKey(Tool, on_delete=models.PROTECT, related_name='Tool', default=None)
     created_at = models.DateTimeField(auto_now_add=True)
     idea_star = models.BooleanField(default=False)
 
