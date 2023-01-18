@@ -1,0 +1,46 @@
+{% extends 'idea_site/base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block header %}
+    <link
+      rel="stylesheet"
+      href="{% static 'idea_site/css/tool_detail.css' %}"
+    />
+    {% endblock header %}
+    <title>{% block title %}개발 도구 상세보기{% endblock title %}</title>
+  </head>
+  {% block content %}
+  <body>
+    <div class="content-wrapper px-5">
+      <div class="left">
+        <h1 class="display-1 mb-3">{{tool.name}}</h1>
+        <div class="sub">
+          <p>
+            관련 아이디어 {% for idea in ideas %}
+            <a href="/idea_detail/{{idea.id}}">
+              <span class="mx-2">{{idea.title}}</span>
+            </a>
+            {% endfor %}
+          </p>
+          <div class="contents">
+            <hr />
+            <div class="mx-2"><div>"{{tool.content}}"</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-list">
+      <div>
+        <a class="btn btn-outline-light" href="/tool_update/{{tool.id}}"
+          >수정</a
+        >
+        <a class="btn btn-outline-light mx-5" href="/tool_list">목 록</a>
+        <a class="btn btn-outline-light" href="/tool_delete/{{tool.id}}"
+          >삭제</a
+        >
+      </div>
+    </div>
+  </body>
+  {% endblock content %}
+</html>

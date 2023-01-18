@@ -1,0 +1,112 @@
+body {
+  color: white;
+}
+
+a {
+  color: white;
+  cursor: pointer;
+}
+
+.main-idea-list {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/bgImage2.jpeg);
+  height: 80%;
+}
+
+.list {
+  height: 80%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.order-wrapper {
+  text-align: right;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+.list-header {
+  font-size: 24px;
+}
+
+.list-items {
+  display: flex;
+  height: 80%;
+}
+
+.item {
+  position: relative;
+  width: 25%;
+  background-color: #888;
+  margin: 0 5px;
+  text-align: left;
+}
+
+.item .img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+}
+
+.item img {
+  width: 60%;
+  height: 70%;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  border-bottom: 1px solid black;
+}
+
+.idea_star {
+  position: absolute;
+  top: 90%;
+  left: 88%;
+}
+
+.idea_star span {
+  color: #95e0f9;
+}
+
+.fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+#interest {
+  font-size: 24px;
+  margin: 0 5px;
+}
+
+.interest-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.interest-wrapper span {
+  cursor: pointer;
+}
+
+.interest-set {
+  display: flex;
+}
+
+.page-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.page-bar a {
+  width: 3%;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.page-bar a:hover {
+  filter: brightness(0.7);
+}
