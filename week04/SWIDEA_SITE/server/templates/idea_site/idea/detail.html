@@ -1,0 +1,67 @@
+{% extends 'idea_site/base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block header %}
+    <link
+      rel="stylesheet"
+      href="{% static 'idea_site/css/idea_detail.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    {% endblock header %}
+    <title>{% block title %}아이디어 상세보기{% endblock title %}</title>
+  </head>
+  {% block content %}
+  <body>
+    <div class="content-wrapper px-5">
+      <div class="left">
+        <h1 class="display-1 mb-3">{{idea.title}}</h1>
+        <div class="idea_star">
+          {% if idea.idea_star %}
+          <a class="toggle-star fill" value="{{idea.id}}">
+            <span class="material-symbols-outlined"> star </span>
+          </a>
+          {% else %}
+          <a class="toggle-star" value="{{idea.id}}">
+            <span class="material-symbols-outlined"> star </span>
+          </a>
+          {% endif %}
+        </div>
+        <div class="sub">
+          <p>
+            예상 개발툴
+            <a href="/tool_detail/{{idea.devtool.id}}">
+              <span class="mx-2">{{idea.devtool.name}}</span>
+            </a>
+          </p>
+          <p>
+            관심도
+            <span class="mx-2">{{idea.interest}}</span>
+          </p>
+          <div class="contents">
+            <hr />
+            <div class="mx-2"><pre>"{{idea.content}}"</pre></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="{{idea.image.url}}" alt="{{idea.title}}" />
+      </div>
+    </div>
+    <div class="go-list">
+      <div>
+        <a class="btn btn-outline-light" href="/idea_update/{{idea.id}}"
+          >수정</a
+        >
+        <a class="btn btn-outline-light mx-5" href="/index">목 록</a>
+        <a class="btn btn-outline-light" href="/idea_delete/{{idea.id}}"
+          >삭제</a
+        >
+      </div>
+    </div>
+  </body>
+  {% endblock content %}
+</html>

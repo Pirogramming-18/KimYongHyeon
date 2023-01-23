@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'idea_site/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'idea_site/css/base.css' %}" />
+    {% block header %}{% endblock header %}
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wraper">
+        <a href="/" class="px-4 py-2" id="header-logo"
+          ><span class="text-light">My</span
+          ><span id="textMovie" class="text-danger"> SW IDEA </span>
+          <span class="text-light">Manager</span></a
+        >
+        <a href="/idea_create" class="text-light px-4 mx-3">아이디어 등록</a>
+        <a href="/index" class="text-light px-4 mx-3">아이디어 관리</a>
+        <a href="/tool_create" class="text-light px-4 mx-3">개발 툴 등록</a>
+        <a href="/tool_list" class="text-light px-4 mx-3">개발 툴 관리</a>
+      </div>
+    </header>
+    
+    {% block content %}{% endblock content %}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+    <script src= {% static 'idea_site/scripts/idea.js' %}></script>
+    {% block script%} {% endblock script %}
+  </body>
+</html>

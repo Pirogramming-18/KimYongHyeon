@@ -1,0 +1,33 @@
+{% extends 'idea_site/base.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block header %}
+    <link rel="stylesheet" href="{% static 'idea_site/css/create.css' %}" />
+    {% endblock header %}
+
+    <title>{% block title %}아이디어 등록하기{% endblock title %}</title>
+  </head>
+  {% block content %}
+  <body>
+    <div class="content-wrapper">
+      <div class="form-content">
+        <div class="form-background">
+          <h1 class="display-6">Register Idea</h1>
+          <form
+            action="{% url 'idea_site:idea_create' %}"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            {% csrf_token %} {{form}}
+            <button class="btn btn-light mt-3">저장하기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  {% endblock content %}
+</html>
