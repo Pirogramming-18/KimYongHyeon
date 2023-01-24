@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>PiroInstagram</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="header">
+        <div class="title"><h2>#피로 파이팅</h2></div>
+      </div>
+      <div class="img-container">
+        <img src="https://picsum.photos/500/300" alt="random-img" />
+      </div>
+      <div class="like-container">
+        <div class="like-btn" onclick="likeButton()">
+          {% if like %}
+          <span class="material-symbols-outlined fill"> favorite </span>
+          {% else %}
+          <span class="material-symbols-outlined"> favorite </span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="comment-container">
+        <div class="text-area">
+          <textarea
+            name="text"
+            id=""
+            cols="60"
+            rows="1"
+            placeholder="댓글 달기"
+          ></textarea>
+          <div class="comment-btn" onclick="commentButton()">댓글 작성</div>
+        </div>
+        <hr />
+
+        <div class="comment-wrapper">
+          {% for data in comments %}
+          <div id="comment-{{data.pk}}">
+            <div class="comment-area">
+              <div class="comment-text">{{data.comment}}</div>
+              <div class="delete-btn" onclick="deleteButton({{data.pk}})">
+                삭제
+              </div>
+            </div>
+            <hr />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+    <script>
+      const strip = (string) => {
+        return string.replace(/^\s+|\s+$/g, "");
+      };
+
+      const requestCreate = new XMLHttpRequest();
+
+      const commentButton = () => {
+        const comment = document.querySelector(".text-area textarea");
+        commentData = comment.value.trim();
+        if (commentData.length == 0) {
+          alert("댓글을 작성해야 합니다!");
+        } else {
+          const url = "/create-comment/";
+          requestCreate.open("POST", url, true);
+          requestCreate.setRequestHeader(
+            "ContentType",
+            "application/x-www-form-urlencoded"
+          );
+          requestCreate.send(JSON.stringify({ text: commentData }));
+        }
+      };
+
+      requestCreate.onreadystatechange = () => {
+        if (requestCreate.readyState === XMLHttpRequest.DONE) {
+          if (requestCreate.status < 400) {
+            const { id, text } = JSON.parse(requestCreate.response);
+            const comments = document.querySelector(".comment-wrapper");
+            let comment = document.createElement("div");
+
+            let deleteBtn = document.createElement("div");
+
+            comment.setAttribute("id", `comment-${id}`);
+
+            let commentArea = document.createElement("div");
+            commentArea.setAttribute("class", "comment-area");
+
+            let commentText = document.createElement("div");
+            commentText.setAttribute("class", "comment-text");
+            commentText.innerHTML = text;
+
+            deleteBtn.setAttribute("class", "delete-btn");
+            deleteBtn.setAttribute("onclick", `deleteButton(${id})`);
+            deleteBtn.innerHTML = "삭제";
+
+            commentArea.appendChild(commentText);
+            commentArea.appendChild(deleteBtn);
+            comment.appendChild(commentArea);
+            comment.appendChild(document.createElement("hr"));
+            comments.appendChild(comment);
+          }
+        }
+      };
+
+      requestDelete = new XMLHttpRequest();
+      const deleteButton = (id) => {
+        const url = "/delete-comment/";
+        requestDelete.open("POST", url, true);
+        requestDelete.setRequestHeader(
+          "ContentType",
+          "application/x-www-form-urlencoded"
+        );
+        requestDelete.send(JSON.stringify({ id: id }));
+      };
+
+      requestDelete.onreadystatechange = () => {
+        if (requestDelete.readyState === XMLHttpRequest.DONE) {
+          if (requestDelete.status < 400) {
+            const { id } = JSON.parse(requestDelete.response);
+            document.querySelector(`#comment-${id}`).remove();
+          }
+        }
+      };
+
+      const requestLike = new XMLHttpRequest();
+      const likeButton = () => {
+        const url = "/toggle-like/";
+        requestLike.open("POST", url, true);
+        requestLike.setRequestHeader(
+          "ContentType",
+          "application/x-www-form-urlencoded"
+        );
+        requestLike.send();
+      };
+
+      requestLike.onreadystatechange = () => {
+        if (requestLike.readyState === XMLHttpRequest.DONE) {
+          if (requestLike.status < 400) {
+            const { status } = JSON.parse(requestLike.response);
+
+            like = document.querySelector(".like-btn span");
+            like.classList.toggle("fill");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
