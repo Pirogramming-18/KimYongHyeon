@@ -6,7 +6,8 @@ from .models import Comment, Like
 
 def main(request, *args, **kwargs):
   comments = Comment.objects.all()
-  like = Like.objects.get(id=1).like
+  data = Like.objects.get_or_create(id=1)
+  like = data[0].like
   context = {'comments': comments,
              'like': like}
   return render(request, 'index.html', context = context)
